@@ -2,7 +2,7 @@ pub trait Summary {
     fn summarize_author(&self) -> String;
 
     fn summarize(&self) -> String {   //类似有初始化，有具体实现
-        format!("Read more from:{}",self.summarize_author())
+        format!("Read more from:{}",self.summarize_author())   //summarize_author can be called
     }
 }
 
@@ -18,9 +18,9 @@ impl Summary for NewArticle {
         format!("@{}",self.author)
     }
 
-    // fn summarize(&self) -> String {          //有具体实现
-    //     format!("{},by {} ({})",self.headline,self.author,self.location)
-    // }
+    fn summarize(&self) -> String {          //because summarize_author be called,so summarize_author must be initialize 
+        format!("{},by {} ({})",self.headline,self.author,self.location)
+    }
 }
 
 pub struct Tweet {
