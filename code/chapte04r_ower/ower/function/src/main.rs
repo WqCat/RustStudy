@@ -1,6 +1,7 @@
 fn main() {
     let s =String::from("Hello World");
     take_owership(s);  //进入函数直接没用了
+   // println!("{}",s);//进入函数直接没用了
 
     let x = 5;
     make_copy(x);
