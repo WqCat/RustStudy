@@ -1,6 +1,6 @@
 fn main() {}
 pub struct Guess {
-    value: i32,
+    value1: i32,
 }
 
 // --snip--
